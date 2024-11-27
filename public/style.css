@@ -108,7 +108,14 @@ h1 {
 .nombre,
 .rango,
 .th,
-.trofeos {
+.trofeos,
+.nombre-clan,
+.liga-clan,
+.miembros-clan,
+.ganados-clan,
+.perdidas-clan,
+.empates-clan,
+.total-guerras-clan {
   color: rgb(255, 0, 255);
   text-shadow: 2px 2px 3px black;
   font-weight: bold;
