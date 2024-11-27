@@ -29,7 +29,7 @@ const iconClan3 = document.querySelector(".icon-clan3");
   //nombre.textContent = `Hola ${data.name} tu TH es lvl ${data.townHallLevel} y tu clan se llama ${data.clan.name}`;
 }; */
 
-fetch("http://localhost:5000/clan")
+fetch("https://clan-the-boys-coc.onrender.com/clan")
   .then((res) => res.json())
   .then((data) => {
     saludarClan(data);
