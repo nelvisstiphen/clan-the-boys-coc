@@ -1,4 +1,3 @@
-
 const contenedorUser = document.querySelector(".container-user");
 
 const fragment = document.createDocumentFragment();
@@ -7,28 +6,28 @@ const template = document.querySelector(".template-players").content;
 const titulo = document.querySelector(".titulo");
 const iconClan = document.querySelectorAll(".icon-clan");
 
-const nombreClan = document.querySelector(".nombre-clan")
+const nombreClan = document.querySelector(".nombre-clan");
 const ligaClan = document.querySelector(".liga-clan");
-const miembrosClan = document.querySelector(".miembros-clan")
+const miembrosClan = document.querySelector(".miembros-clan");
 const guerrasGanadas = document.querySelector(".ganados-clan");
 const guerrasPerdidas = document.querySelector(".perdidas-clan");
 const guerrasEmpatadas = document.querySelector(".empates-clan");
 const totalGuerras = document.querySelector(".total-guerras-clan");
 
-const iconClan1 = document.querySelector(".icon-clan1")
-const iconClan2 = document.querySelector(".icon-clan2")
-const iconClan3 = document.querySelector(".icon-clan3")
+const iconClan1 = document.querySelector(".icon-clan1");
+const iconClan2 = document.querySelector(".icon-clan2");
+const iconClan3 = document.querySelector(".icon-clan3");
 
-fetch("http://localhost:5000/player")
+/* fetch("http://localhost:5000/player")
   .then((res) => res.json())
   .then((data) => {
     saludarPlayer(data);
     console.log(data);
-  });
+  }); */
 
-const saludarPlayer = (data) => {
+/* const saludarPlayer = (data) => {
   //nombre.textContent = `Hola ${data.name} tu TH es lvl ${data.townHallLevel} y tu clan se llama ${data.clan.name}`;
-};
+}; */
 
 fetch("http://localhost:5000/clan")
   .then((res) => res.json())
@@ -43,7 +42,7 @@ fetch("http://localhost:5000/clan")
   });
 
 const datosClan = (data) => {
-  nombreClan.textContent = data.name
+  nombreClan.textContent = data.name;
   ligaClan.textContent = data.warLeague.name;
   miembrosClan.textContent = data.members;
   guerrasGanadas.textContent = data.warWins;
@@ -51,9 +50,9 @@ const datosClan = (data) => {
   guerrasEmpatadas.textContent = data.warTies;
   let guerrasTotales = data.warWins + data.warLosses + data.warTies;
   totalGuerras.textContent = guerrasTotales;
-  iconClan1.setAttribute("src", data.labels[0].iconUrls.small)
-  iconClan2.setAttribute("src", data.labels[1].iconUrls.small)
-  iconClan3.setAttribute("src", data.labels[2].iconUrls.small)
+  iconClan1.setAttribute("src", data.labels[0].iconUrls.small);
+  iconClan2.setAttribute("src", data.labels[1].iconUrls.small);
+  iconClan3.setAttribute("src", data.labels[2].iconUrls.small);
 };
 
 const saludarClan = (data) => {

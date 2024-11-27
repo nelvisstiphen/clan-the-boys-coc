@@ -160,7 +160,7 @@ let client = clashApi({
   token: API_KEY, // Optional, can also use COC_API_TOKEN env variable
 });
 
-async function showPlayerInfo(tag) {
+/* async function showPlayerInfo(tag) {
   try {
     const playerInfo = await client.playerByTag(tag);
     //console.log("this is the player info:", playerInfo.name);
@@ -171,8 +171,8 @@ async function showPlayerInfo(tag) {
     });
   } catch (error) {
     console.error(error);
-  }
-}
+  } 
+}*/
 
 async function showClanByTag(tag) {
   try {
