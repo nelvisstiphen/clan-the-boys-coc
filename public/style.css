@@ -19,7 +19,6 @@ body {
 }
 
 .nav {
-  
   display: none;
 }
 
@@ -87,7 +86,7 @@ h1 {
   max-width: 100%;
 }
 
-.datos-clan div  {
+.datos-clan div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +99,7 @@ h1 {
 }
 
 .descripcion {
-  color: rgb(0, 255, 0);
+  color: white;
   width: 70px;
   font-style: italic;
   font-weight: bold;
@@ -162,7 +161,7 @@ h1 {
   }
   .nav {
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 }
